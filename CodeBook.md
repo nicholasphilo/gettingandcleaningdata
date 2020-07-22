@@ -13,11 +13,9 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details.
 
 
-
-
 ## Transformations
 1. The training and test data sets of X, Y and subject are partially merged.
-2. The columns which contain "mean" and "std" are used to select desired columns from the X data.  
+2. The column names which contain "mean" and "std" are used to select desired columns from the X data.  
 3. The factor variables of subject and activity are then merged to form the total data set.  
 4. The columns are renamed to be more descriptive. 
 5. The data is then grouped by subject and activity and the means for these categories are reported in a table.  
@@ -30,10 +28,10 @@ The variables saved in the merged and tidied data set are:
 
 **subject**: the study volunteers aged 19-48 from 1:30
 
-**activity**: taked the value of "STANDING", "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "LAYING" representing the task the volunteers were undertaking.
+**activity**: takes the value of "STANDING", "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "LAYING" representing the task the volunteers were undertaking.
 
 
-
+The following variables should be understood in terms of the descriptions of the original datasets measurements. However, the variables have been tidied to be more immediately comprehensible.
 
 - time body accelerometer mean x
 - time body accelerometer mean y
