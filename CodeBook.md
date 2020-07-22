@@ -26,8 +26,11 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 ## Tidy Variables
 
+The variables saved in the merged and tidied data set are:
+
 **subject**: the study volunteers aged 19-48 from 1:30
-**activity**: values of "STANDING", "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "LAYING" which represent the task the volunteers where undertaking.
+
+**activity**: taked the value of "STANDING", "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "LAYING" representing the task the volunteers were undertaking.
 
 
 
