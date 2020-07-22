@@ -70,6 +70,8 @@ x_data <- x_data[,mean_std_condition]
 data <- cbind.data.frame(  sj_data  ,  y_data  ,  x_data  )
 colnames(data) <- c("subject", "activity", dta_names)
 
+
+
 ### Creating factor variables for the subject and activity variables
 
 data$activity <- factor(data$activity, levels = actv_label[,1], labels = actv_label[,2])
@@ -95,6 +97,11 @@ dta_names <- tolower(dta_names)
 colnames(data) <- c("subject", "activity", dta_names)
 
 
+### Creating a tidy data set with the means of the subject and activity
 
+df_melt <- melt(data, id = c("subject", "activity"))
+tidy_data <- dcast(df_melt, subject + activity ~ variable, mean)
 
+### Writing the data to tidy.txt file
 
+write.table(tidy_data, "tidydata.txt", row.names = FALSE)
